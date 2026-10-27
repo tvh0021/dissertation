@@ -2,14 +2,12 @@
 %------------------------------------------------------------------------------------
 % FRONT MATTER TEMPLATE INFORMATION
 %------------------------------------------------------------------------------------
-%%ADD BASIC DISSERTATION INFORMATION
 \newcommand{\authname}{Trung Ha}
 \newcommand{\distitle}{The Next Generation of Diagnostic Tools for \\ Astrophysical Turbulence}
 \newcommand{\monthyear}{September 2026}
 \newcommand{\degreename}{Doctor of Philosophy in Astronomy}
 \newcommand{\programname}{Graduate Program in Astronomy}		 
 
-%%ADD YOUR COMMITTEE INFORMATION
 \newcommand{\advisorname}{Yuan Li}
 \newcommand{\comone}{Grant Wilson}
 \newcommand{\comtwo}{Houjun Mo}
@@ -17,7 +15,6 @@
 \newcommand{\headname}{Grant Wilson}		
 \newcommand{\deptname}{Astronomy}	
 
-%ADD YOUR EDUCATIONAL HISTORY
 \newcommand{\associatedegree}{A.S.}
 \newcommand{\associateinstitution}{Central Arizona College}
 \newcommand{\undergraddegree}{B.S.}	
@@ -103,12 +100,10 @@
 \vspace{1.5\baselineskip}
 }
 
-%ADD YOUR DEDICATION (UNDER 350 WORDS)
 \newcommand{\dedfill}{
 \textit{To my parents, whose unwavering support I have often taken for granted.}
 }
 
-%ADD YOUR ACKNOWLEDGEMENTS 
 \newcommand{\acknowledgementstfill}{
 This dissertation would not have been possible without the support of many individuals I met and learned from since childhood. 
 
@@ -134,7 +129,6 @@ I would like to thank my parents, Ha Vinh Thao and Pham Thi Le Ha, for their sac
 This dissertation was made possible by the financial support from Dr.~Yuan Li's NSF (AST-2107735) and NASA ATP (21-ATP21-0072) grants. I acknowledge financial support from the University of North Texas' R. B. Toulouse Scholarship, Zhibing Hu Scholarship, College of Science Travel Award, and from the University of Massachusetts Amherst's Mary Dailey Irvine Graduate Travel Grant. I am grateful to have received the Pre-doctoral Fellowship from the Simons Foundation. I also acknowledge computational support from the National Science Foundation through ACCESS allocation PHY240092.
 }
 
-%ADD YOUR ABSTRACT (UNDER 350 WORDS)
 \newcommand{\abstractfill}{\quad
 Astrophysical turbulence shapes the transport of matter and energy across environments ranging from the multiphase atmospheres of galaxy clusters, to star-forming molecular clouds, to relativistic plasmas near compact objects. Despite its ubiquity, turbulence remains difficult to observe or model directly: observational tracers are limited by resolution, projection effects, and phase selection, while numerical models cannot yet span the full range from driving to dissipation. This dissertation develops diagnostic tools for modeling astrophysical turbulence across scales by connecting observable tracers, numerical simulations, and machine-learning diagnostics.
 
@@ -147,7 +141,6 @@ In the hot atmosphere of elliptical galaxies, I study how turbulence and multiph
 
 \begin{document}
 
-%------------------------------------------------------------------------------------
 % MAIN BODY 
 \input{FrontMatter}
 \pagenumbering{arabic}
@@ -155,7 +148,6 @@ In the hot atmosphere of elliptical galaxies, I study how turbulence and multiph
 \addtocontents{toc}{\hfill \par}
 \addtocontents{toc}{\protect\noindent CHAPTER\par}
 \doublespacing
-%------------------------------------------------------------------
 
 \input{Chapter1}
 \input{Chapter2}
@@ -164,13 +156,11 @@ In the hot atmosphere of elliptical galaxies, I study how turbulence and multiph
 \input{Chapter5}
 
 
-%------------------------------------------------------------------
 % BIBLIOGRAPHY INFORMATION
 \newpage
 \addtocontents{toc}{\hfill \par}
 \phantomsection
 \addcontentsline{toc}{chapter}{\hspace{1em}\bibname}
-%------------------------------------------------------------------------------------
 
 \begingroup
 \singlespacing
@@ -180,7 +170,5 @@ In the hot atmosphere of elliptical galaxies, I study how turbulence and multiph
 \bibliography{references}
 \endgroup
 
-% \bibliographystyle{aasjournal}   %Can change the style of your bibliography
-% \bibliography{references}      %Enter your bib file's name here
 
 \end{document}

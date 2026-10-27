@@ -35,9 +35,6 @@
 
 
 
-%------------------------------------------------------------------------------------
-%BEHIND THE SCENES STUFF
-%------------------------------------------------------------------------------------
 %%Resetting the Titles to be ALL CAPS
 \renewcommand{\chaptername}{CHAPTER}
 \renewcommand{\bibname}{BIBLIOGRAPHY}
@@ -95,7 +92,6 @@
 
 %%Remove space before title to start at top of page
 \titlespacing{\chapter}{0cm}{0pt}{15pt}
-    %\titlespacing{\chapter}{left}{before}{after}
 
 
 %% Adding Periods to Numbers in List of Tables and List of Figures

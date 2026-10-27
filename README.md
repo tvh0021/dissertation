@@ -7,6 +7,7 @@ University of Massachusetts Amherst (September 2026). Advisor: Yuan Li.
 
 | Path | Description |
 |---|---|
+| `UMASS_dissertation-TrungHa.pdf` | Compiled dissertation (Ghostscript-compressed from the 35 MB submission build; same text and page layout) |
 | `MAIN.tex` | Top-level document: metadata, macros, dedication, acknowledgements, abstract |
 | `FrontMatter.tex` | Title, copyright, signature, and table-of-contents pages |
 | `Chapter1.tex` – `Chapter5.tex` | Introduction, stellar kinematics, plasma turbulence, SMBH accretion, outlook |

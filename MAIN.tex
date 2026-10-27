@@ -1,0 +1,186 @@
+\documentclass[letterpaper, 12pt]{UMassDissAN}
+%------------------------------------------------------------------------------------
+% FRONT MATTER TEMPLATE INFORMATION
+%------------------------------------------------------------------------------------
+%%ADD BASIC DISSERTATION INFORMATION
+\newcommand{\authname}{Trung Ha}
+\newcommand{\distitle}{The Next Generation of Diagnostic Tools for \\ Astrophysical Turbulence}
+\newcommand{\monthyear}{September 2026}
+\newcommand{\degreename}{Doctor of Philosophy in Astronomy}
+\newcommand{\programname}{Graduate Program in Astronomy}		 
+
+%%ADD YOUR COMMITTEE INFORMATION
+\newcommand{\advisorname}{Yuan Li}
+\newcommand{\comone}{Grant Wilson}
+\newcommand{\comtwo}{Houjun Mo}
+\newcommand{\comthree}{Subhransu Maji}
+\newcommand{\headname}{Grant Wilson}		
+\newcommand{\deptname}{Astronomy}	
+
+%ADD YOUR EDUCATIONAL HISTORY
+\newcommand{\associatedegree}{A.S.}
+\newcommand{\associateinstitution}{Central Arizona College}
+\newcommand{\undergraddegree}{B.S.}	
+\newcommand{\undergradinstitution}{University of Rochester} 
+\newcommand{\mastersdegree}{M.S.}
+\newcommand{\mastersinstitution}{University of North Texas}
+
+% Macros used throughout the text
+\newcommand{\halpha}{H$\alpha$}
+\newcommand{\rophi}{$\rho$~Oph}
+\newcommand{\vsf}{$\langle|\delta \vec v|\rangle$}
+
+\newcommand{\jmag}{\ensuremath{j}}
+\newcommand{\jz}{\ensuremath{j_z}}
+\newcommand{\jpar}{\ensuremath{j_{\parallel}}}
+\newcommand{\jperp}{\ensuremath{j_{\perp}}}
+\newcommand{\bz}{\ensuremath{b_z}}
+\newcommand{\bperp}{\ensuremath{b_{\perp}}}
+\newcommand{\epar}{\ensuremath{e_{\parallel}}}
+\newcommand{\eperp}{\ensuremath{e_{\perp}}}
+\newcommand{\jasym}{\ensuremath{j_{\rm a}}}
+\newcommand{\awesom}{\texttt{aweSOM}}
+\newcommand{\gsum}{$G_{\rm sum}$}
+\newcommand{\ud}{\ensuremath{\mathrm{d}}}
+\newcommand{\popsom}{\texttt{POPSOM}}
+
+\newcommand{\racc}{$R_{\rm acc}$}
+\newcommand{\fkin}{$f_{\rm kin}$}
+\newcommand{\mdotbh}{$\dot{M}_{\rm BH}$}
+\newcommand{\ath}{\texttt{Athena++}}
+\newcommand{\mdot}{$\dot{M}$}
+\newcommand{\mrrelation}{$\dot{M} \propto r^{1/2}$}
+\newcommand{\rg}{$r_{\rm g}$}
+\newcommand{\rb}{$r_{\rm B}$}
+\newcommand{\mdotb}{$\dot{M}_{\rm B}$}
+
+% Store and reference full hierarchical section numbers without hardcoding them.
+\makeatletter
+\newcommand{\fullsubsectionlabel}[1]{%
+  \label{#1}%
+  \begingroup
+    \edef\@currentlabel{\arabic{chapter}.\Alph{section}.\arabic{subsection}}%
+    \label{#1-full}%
+  \endgroup
+}
+\newcommand{\fullsubsubsectionlabel}[1]{%
+  \label{#1}%
+  \begingroup
+    \edef\@currentlabel{\arabic{chapter}.\Alph{section}.\arabic{subsection}.\alph{subsubsection}}%
+    \label{#1-full}%
+  \endgroup
+}
+\newcommand{\fullsectionref}[1]{\hyperref[#1]{Section~\ref*{#1-full}}}
+\makeatother
+
+% Publication detail blocks for dissertation chapters adapted from published papers.
+\newcommand{\publicationdetails}[5][Published version:]{%
+\begin{center}
+\textbf{#1 #2}
+
+\vspace{1.5\baselineskip}
+#3
+\end{center}
+
+\vspace{0.75\baselineskip}
+\noindent\textbf{Abstract:}\quad #4
+
+\vspace{\baselineskip}
+#5
+\vspace{1.5\baselineskip}
+}
+
+\newcommand{\publicationdetailsnoabstract}[3]{%
+\begin{center}
+\textbf{Published version: #1}
+
+\vspace{1.5\baselineskip}
+#2
+\end{center}
+
+\vspace{\baselineskip}
+#3
+\vspace{1.5\baselineskip}
+}
+
+%ADD YOUR DEDICATION (UNDER 350 WORDS)
+\newcommand{\dedfill}{
+\textit{To my parents, whose unwavering support I have often taken for granted.}
+}
+
+%ADD YOUR ACKNOWLEDGEMENTS 
+\newcommand{\acknowledgementstfill}{
+This dissertation would not have been possible without the support of many individuals I met and learned from since childhood. 
+
+I would first like to thank my advisor, Dr.~Yuan Li, for her careful guidance, patience, and understanding throughout the past six years. My tendency to be distracted by shiny new projects means that my productivity was wildly inconsistent over the course of my PhD, so I am forever grateful that you remained supportive of my unorthodox approach to science. I learned to appreciate the beauty of turbulence from you, and I ended up with an entire dissertation on this topic. I also thank Dr.~Grant Wilson, Dr.~Houjun Mo, and Dr.~Subhransu Maji for supervising this PhD dissertation.
+
+I would like to thank my supervisors on other research projects that I have led during my PhD.
+I thank Dr.~Ohad Shemmer at University of North Texas for his advice, support, and for showing me how to carry out an observational study from data collection, to cleaning spectra with IRAF, to writing a paper on quasars.
+I thank Dr.~Joonas Nättilä, Dr.~Jordy Davelaar, and Dr.~Lorenzo Sironi at the Flatiron Institute for taking me under their wings as a pre-doctoral fellow, for showing me the wealth of interesting physics behind magnetized plasma, and for allowing me the freedom to explore software development under the guise of an astrophysics fellowship.
+I also thank Dr.~Siyao Xu, Dr.~Kaze Wong, Dr.~Christopher White, Dr.~Sean Ressler, Dr.~John Bally, and Dr.~Pham Ngoc Diep for their helpful and valuable discussions which significantly improved my work.
+
+I am also grateful to have received career advice and scientific guidance from Dr.~Eric Blackman at University of Rochester and Dr.~Joshua Faber at the Rochester Institute of Technology.
+I thank Dr.~Manuela Campanelli at the Rochester Institute of Technology, first for allowing a student from another school to join your research group for two years, then for writing a letter in support of my U.S. permanent residency petition, and more recently for the continued engaging scientific discussions and for inviting me to give a seminar at the CCRG\@. I also thank Dr.~Greg Bryan, Dr.~Alex Lazarian, and Dr.~Adam Kraus for their letters of support that enabled me to obtain U.S. permanent residency during my PhD.
+
+Going back even further, because my dissertation is a culmination of countless teachers and mentors who taught me the curiosity and discipline I need to complete this PhD, I thank Dr.~Eric Menu at Mesa Community College and Dr.~Bruce Martin at Central Arizona College for believing in my potential even when I was only sixteen. I thank the faculty members at Apache Trail High School for welcoming a foreign exchange student with open arms. I thank my middle school math teacher, Mr.~Vu Cao Thang, for instilling in me the mathematical disciplines that I still use to this day. Lastly, I express my endless gratitude toward Mr.~Tran Minh Tri, whom I consider my first physics teacher, and whose lectures inspired me to embark on this journey.
+
+I am grateful to many friends and colleagues whom I have overlapped with during my PhD\@. In particular, I want to thank Jeremy Gingrich for being the first friend I made at UNT, and for being there for me through much of the COVID-years challenges. I thank William Mitchell, Alexandra Barnett Mitchell, Ashley Wilkinson, Noah Hurley, Brandon Matthews, and Jacob Reinheimer for their friendship during my time in Texas.
+I am also grateful to the graduate student cohort at UMass Amherst who have extended their friendship to me as an incoming fifth-year student.
+
+Some friendships were built years before this chapter of my life, and continued to grow over the past six years. I want to thank Mervin Lim Pac Chong, Adam Phillips, Andreas Ruben Munguia Rivera, Orion Haunstrup, Benjamin McGowan, Joel Britez Aveiro, Dannie Marsella, Tri Nguyen, and Elizabeth Winterbourne, who all endured several Rochester winters with me. I thank Joshua Thompson for taking me to school and for being my only friend in Arizona. I want to thank Lisa Vu for always being there for me, and for consistently encouraging me to step out of my comfort zone. I thank Lam Yen Le for remaining one of my best friends and confidantes despite our distance. Lastly, I am grateful to still spend the occasional quality time with several close friends whom I have known since the first grade: Mimi Nguyen, Dakota Le, Thanh Nguyen Cao, Trung Ngoc Nguyen. 
+
+I would like to thank my parents, Ha Vinh Thao and Pham Thi Le Ha, for their sacrifice, for enduring the distance, for always believing in me, and my host family, Craig Lindblad, Karen Lindblad, David Lindblad, and Christa Jennings, for taking me in as their own and continuing to provide me with a home away from home. I also want to thank all of my extended family members for their support.
+
+This dissertation was made possible by the financial support from Dr.~Yuan Li's NSF (AST-2107735) and NASA ATP (21-ATP21-0072) grants. I acknowledge financial support from the University of North Texas' R. B. Toulouse Scholarship, Zhibing Hu Scholarship, College of Science Travel Award, and from the University of Massachusetts Amherst's Mary Dailey Irvine Graduate Travel Grant. I am grateful to have received the Pre-doctoral Fellowship from the Simons Foundation. I also acknowledge computational support from the National Science Foundation through ACCESS allocation PHY240092.
+}
+
+%ADD YOUR ABSTRACT (UNDER 350 WORDS)
+\newcommand{\abstractfill}{\quad
+Astrophysical turbulence shapes the transport of matter and energy across environments ranging from the multiphase atmospheres of galaxy clusters, to star-forming molecular clouds, to relativistic plasmas near compact objects. Despite its ubiquity, turbulence remains difficult to observe or model directly: observational tracers are limited by resolution, projection effects, and phase selection, while numerical models cannot yet span the full range from driving to dissipation. This dissertation develops diagnostic tools for modeling astrophysical turbulence across scales by connecting observable tracers, numerical simulations, and machine-learning diagnostics.
+
+In star-forming regions, I use young stellar kinematics to recover interstellar turbulence inherited from natal molecular clouds. By combining Gaia astrometry with APOGEE radial velocities, I reconstruct six-dimensional stellar kinematics in four star-forming regions. Their velocity structure functions reveal turbulent scaling inherited from natal molecular clouds and show how dense clusters, supernova history, and the multiphase structure of the interstellar medium can modify or erase that memory. This method establishes young stars as a useful complement to gas tracers: with full kinematic information, they reduce projection uncertainties while preserving the dynamical state of their birth environments.
+
+In relativistic plasma, I develop machine-learning diagnostics to characterize intermittent structures in strongly magnetized pair-plasma turbulence near compact objects. Using the \awesom\ framework, I analyze particle-in-cell simulations to separate magnetically active regions from the background plasma. This analysis identifies two current-sheet populations: single current sheets associated with merging flux ropes and double current sheets linked to nonlinear wave interactions. The \awesom\ package provides a community tool for bulk current-sheet identification across simulation datasets.
+
+In the hot atmosphere of elliptical galaxies, I study how turbulence and multiphase gas regulate accretion onto supermassive black holes (SMBHs). With the first multiphase, multi-scale simulations of M87 accretion with jet feedback, I connect galaxy-scale cooling, filamentary inflow, disk formation, and SMBH feeding across eight orders of magnitude in scale. Combined, these studies physically constrain turbulence as a regulator of star formation, plasma dissipation, and black-hole feeding and feedback.
+}
+
+\begin{document}
+
+%------------------------------------------------------------------------------------
+% MAIN BODY 
+\input{FrontMatter}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\addtocontents{toc}{\hfill \par}
+\addtocontents{toc}{\protect\noindent CHAPTER\par}
+\doublespacing
+%------------------------------------------------------------------
+
+\input{Chapter1}
+\input{Chapter2}
+\input{Chapter3}
+\input{Chapter4}
+\input{Chapter5}
+
+
+%------------------------------------------------------------------
+% BIBLIOGRAPHY INFORMATION
+\newpage
+\addtocontents{toc}{\hfill \par}
+\phantomsection
+\addcontentsline{toc}{chapter}{\hspace{1em}\bibname}
+%------------------------------------------------------------------------------------
+
+\begingroup
+\singlespacing
+\setlength{\bibsep}{1.00\baselineskip}   % double-spaced between entries
+\interlinepenalty=10000                   % keep each entry on a single page
+\bibliographystyle{aasjournal}
+\bibliography{references}
+\endgroup
+
+% \bibliographystyle{aasjournal}   %Can change the style of your bibliography
+% \bibliography{references}      %Enter your bib file's name here
+
+\end{document}

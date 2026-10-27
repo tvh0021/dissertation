@@ -1,0 +1,25 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.lof
+*.lot
+*.out
+*.toc
+*.xdv
+*.synctex.gz
+MAIN.pdf
+
+# OS / editor
+.DS_Store
+
+# Local-only material (not part of the public release)
+Talks/
+output/
+sanitized_dissertation/
+*.zip
+Dissertation_audit.md
+rulebook.md

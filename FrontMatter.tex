@@ -1,0 +1,130 @@
+
+%------------------------------------------------------------------------------------
+% FRONT MATTER
+%------------------------------------------------------------------------------------
+
+% Begin Document
+
+% Title Page (counted as page i, but no number displayed)
+\pagenumbering{roman}
+\thispagestyle{empty}
+\begin{center}
+ 	\MakeUppercase{\large \distitle}\\[4.25cm]		%Automatically Adds Title
+	A Dissertation Presented\\[0.5cm]
+	by\\[0.5cm]
+	    \authname\\[3cm]		%Automatically Adds Your Name
+	Submitted to the Graduate School of the\\
+	University of Massachusetts Amherst in partial fulfillment\\
+	of the requirements for the degree of\\[1.5cm]
+	\degreename\\[1cm]		%Automatically Adds Official Degree Name
+	\monthyear\\[1cm]		%Automatically Adds Graduation Month/Year
+	\programname			%Automatically Adds Your Program Name
+\end{center}
+\newpage
+
+%% Copyright Page
+\thispagestyle{empty}
+\begin{center}
+    \vspace*{18cm}
+    \textcopyright~Copyright by \authname~\the\year\\
+    All Rights Reserved.
+\end{center}
+\newpage
+
+%% Signature Page
+\thispagestyle{empty}
+\begin{center}
+    \MakeUppercase{\large \distitle}\\[3cm]
+    A Dissertation Presented\\
+    By\\
+    \authname
+\end{center}
+\vspace*{3cm}
+Approved as to style and content by:\\[1cm]
+    \begin{tabular}{l}
+    \rule{6.5cm}{0.4pt} \\
+    \advisorname, Chair \\[1cm]	%Automatically Adds Advisor Name
+
+    \rule{6.5cm}{0.4pt} \\
+    \comone, Member \\[1cm]		%Automatically Adds Committee Member Name
+
+    \rule{6.5cm}{0.4pt} \\
+    \comtwo, Member \\[1cm]	%Automatically Adds Committee Member Name
+
+    \rule{6.5cm}{0.4pt} \\
+    \comthree, Member			%Automatically Adds Committee Member Name
+    \end{tabular}
+\begin{flushright}
+    \begin{tabular}{l}
+    \rule{6.5cm}{0.4pt} \\
+    \headname, Department Head \\   %Automatically Adds Department Head and Dept.
+    \deptname
+    \end{tabular}
+\end{flushright}
+
+\newpage
+
+%Dedication Page
+\thispagestyle{empty}
+\begin{center}
+\textbf{DEDICATION}\\[1.5cm]
+\dedfill
+\end{center}
+\newpage
+
+%Acknowledgements Page
+\pagenumbering{roman}
+\thispagestyle{plain}
+\doublespacing
+\setcounter{page}{5}
+\phantomsection
+\addcontentsline{toc}{chapter}{ACKNOWLEDGEMENTS}
+
+\begin{center}
+\textbf{ACKNOWLEDGEMENTS}
+\end{center}
+
+\acknowledgementstfill
+
+\newpage
+
+% Abstract Page
+\thispagestyle{plain}
+\phantomsection
+\addcontentsline{toc}{chapter}{ABSTRACT}
+\begin{center}
+\textbf{ABSTRACT}\\
+\MakeUppercase{\large \distitle}\\
+\MakeUppercase{\monthyear}\\
+\MakeUppercase{\authname}\\
+\MakeUppercase{\associatedegree,
+\associateinstitution}\\
+\MakeUppercase{\undergraddegree, \undergradinstitution}\\
+\MakeUppercase{\mastersdegree, \mastersinstitution}\\
+Ph.D., UNIVERSITY OF MASSACHUSETTS AMHERST\\
+Directed by: Professor \advisorname
+\end{center}
+\sloppy
+\abstractfill
+\newpage
+
+% Table of Contents
+\singlespacing
+\thispagestyle{plain}
+\pdfbookmark[0]{TABLE OF CONTENTS}{toc}
+\tableofcontents
+\newpage
+
+% List of Tables
+\phantomsection
+\addcontentsline{toc}{chapter}{LIST OF TABLES}
+\thispagestyle{plain}
+\listoftables
+\newpage
+
+% List of Figures
+\phantomsection
+\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+\thispagestyle{plain}
+\listoffigures
+\newpage
